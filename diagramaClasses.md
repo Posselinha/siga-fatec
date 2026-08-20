@@ -3,14 +3,10 @@ classDiagram
     class Aluno {
         -String matricula
         -double media
-        +getNome()
         +getMatricula()
         +getMedia()
-        +getAtivo()
-        +setNome(String nome)
         +setMatricula(String matricula)
         +setMedia(double media)
-        +setAtivo(boolean ativo)
     }
     class Matricula {
         +dobule valorBase
@@ -18,11 +14,18 @@ classDiagram
         +calcularMensalidade()
     }
     class Pessoa {
-        #String nome
-        #boolean ativo
+        -String nome
+        -boolean ativo
+        +getNome()
+        +getAtivo()
+        +setNome(String nome)
+        +setAtivo(boolean ativo)
     }
     class Professor {
-        +String siape
+        -String siape
+        +getSiape()
+        +setSiape(String siape)
+
     }
     class Turma {
         -List~Aluno~ alunos
