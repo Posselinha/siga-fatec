@@ -20,5 +20,42 @@ public class Aluno {
     private double media;
     private boolean ativo;
 
+    // Getters
+    public String getNome() {
+        return this.nome;
+    }
+
+    public String getMatricula() {
+        return this.matricula;
+    }
+
+    public double getMedia() {
+        return this.media;
+    }
+
+    public boolean getAtivo() {
+        return this.ativo;
+    }
+
+    // Setters
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public void setMedia(double media) {
+        if (media < 0 || media > 10) {
+            throw new IllegalArgumentException("Média só pode ficar entre 0 e 10");
+        }
+        this.media = media;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
+
     // Sem construtor: o objeto pode ser criado em estado incompleto/inconsistente.
 }
