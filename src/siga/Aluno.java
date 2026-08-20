@@ -34,9 +34,12 @@ public class Aluno extends Pessoa {
 
     public void setMedia(double media) {
         if (media < 0 || media > 10) {
-            throw new IllegalArgumentException("Média só pode ficar entre 0 e 10");
+            // Iria usar throw mas ele está impedindo o código de executar por completo
+            // throw new IllegalArgumentException("Média só pode ficar entre 0 e 10");
+            System.out.println("Média só pode ficar entre 0 e 10");
+        } else {
+            this.media = media;
         }
-        this.media = media;
     }
 
     // Sem construtor: o objeto pode ser criado em estado incompleto/inconsistente.
