@@ -19,10 +19,6 @@ public class Aluno extends Pessoa {
     private double media;
 
     // Getters
-    public String getNome() {
-        return this.nome; // Acessa a super classe
-    }
-
     public String getMatricula() {
         return this.matricula;
     }
@@ -31,15 +27,7 @@ public class Aluno extends Pessoa {
         return this.media;
     }
 
-    public boolean getAtivo() {
-        return this.ativo; // Acessa a super classe
-    }
-
     // Setters
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
@@ -49,10 +37,6 @@ public class Aluno extends Pessoa {
             throw new IllegalArgumentException("Média só pode ficar entre 0 e 10");
         }
         this.media = media;
-    }
-
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
     }
 
     // Sem construtor: o objeto pode ser criado em estado incompleto/inconsistente.

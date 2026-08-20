@@ -9,8 +9,17 @@ package siga;
  */
 public class Professor extends Pessoa {
 
-    // Atributos públicos: mesma violação de encapsulamento da classe Aluno.
-    // Não vou colocar o encapsulamento, getters e setters ainda por conta que
-    // não está sendo solicitado no arquivo
-    public String siape;
+    // Adicionado encapsulamento
+    private String siape;
+
+    // Getters
+    public String getSiape() {
+        return this.siape;
+    }
+
+    // Setters
+    public void setSiape(String siape) {
+        this.siape = siape;
+    }
+
 }
