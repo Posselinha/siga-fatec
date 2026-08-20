@@ -12,17 +12,15 @@ package siga;
  * objeto e permitindo que qualquer código o coloque em um estado inválido (por
  * exemplo, uma média negativa ou maior que 10).
  */
-public class Aluno {
+public class Aluno extends Pessoa {
 
     // Realizado alteração dos atributos de public para private
-    private String nome;
     private String matricula;
     private double media;
-    private boolean ativo;
 
     // Getters
     public String getNome() {
-        return this.nome;
+        return this.nome; // Acessa a super classe
     }
 
     public String getMatricula() {
@@ -34,7 +32,7 @@ public class Aluno {
     }
 
     public boolean getAtivo() {
-        return this.ativo;
+        return this.ativo; // Acessa a super classe
     }
 
     // Setters
